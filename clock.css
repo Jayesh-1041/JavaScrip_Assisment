@@ -1,0 +1,43 @@
+body {
+    width: auto;
+    height: auto;
+    background-color:rgb(219, 196, 196);
+    color: rgb(71, 53, 53);
+    font-weight: 600;
+    font-family: 'Arial', sans-serif;
+}
+h4{
+    text-align: center;
+    font-size: 2.5rem;
+    color: rgb(100, 30, 30);
+    font-weight: 700;
+    margin-top: 100PX;
+}
+
+.day{
+    width: 400PX;
+    margin-left: 450PX;
+    text-align: center;
+    font-size: 32px;
+    color: rgba(53, 44, 36, 0.89);
+    background-color: rgb(151, 237, 240);
+    border:5px solid rgb(139, 124, 124);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    padding: 20px;
+
+}
+
+.date {
+    width: 400PX;
+    margin-left: 450PX;
+    text-align: center;
+    font-size: 50px;
+    color: rgb(224, 174, 155);
+    background-color: rgb(52, 82, 74);
+    border: 5px solid rgb(29, 195, 224);
+    margin-top: 20px;
+    padding: 20px;
+    border-top-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+}
