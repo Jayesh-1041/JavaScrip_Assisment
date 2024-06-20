@@ -1,4 +1,4 @@
-function updateClock() {
+    function updateClock() {
     
     const clockElement = document.getElementById('clock');
     const now = new Date();
@@ -18,7 +18,6 @@ function updateClock() {
     }
     
     // Date Format
-
     const day = now.getDate();
     const month = now.getMonth();
     const year = now.getFullYear();
@@ -35,7 +34,7 @@ function updateClock() {
     const time = `${hours}:${minutes}:${seconds}:${session}`;
 
 
-    clockElement.innerHTML = `<div class="day">${date}</div><div class="date">${time}</div>`;
+    clockElement.innerHTML = `<div class="day">${date}</div>,<div class="date">${time}</div>`;
     }
 
     setInterval(updateClock, 1000);
