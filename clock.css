@@ -22,8 +22,8 @@ h4{
     color: rgba(53, 44, 36, 0.89);
     background-color: rgb(151, 237, 240);
     border:5px solid rgb(139, 124, 124);
-    border-top-left-radius: 35px;
-    border-bottom-right-radius: 35px;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
     padding: 20px;
 
 }
@@ -38,6 +38,7 @@ h4{
     border: 5px solid rgb(29, 195, 224);
     margin-top: 20px;
     padding: 20px;
-    border-top-right-radius: 35px;
-    border-bottom-left-radius: 35px;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+   
 }

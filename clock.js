@@ -4,13 +4,12 @@
     const now = new Date();
 
     // Time Format
-    const hours = now.getHours();
-    const minutes = now.getMinutes();
-    const seconds = now.getSeconds();
-    let session = "AM";
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
     
-    if(hours == 0){
-        hours = 12;
+    if(hours < 12){
+        session = "AM";
     }
     
     if(hours > 12){
