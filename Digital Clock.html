@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Digital Clock</title>
+    <style>
+        body {
+            width: auto;
+            height: auto;
+            background-color:aqua;
+            color: rgb(71, 53, 53);
+            font-weight: 600;
+            font-family: 'Arial', sans-serif;
+        }
+        h4{
+            text-align: center;
+            font-size: 2.5rem;
+            color: rgb(100, 30, 30);
+            font-weight: 700;
+            margin-top: 100PX;
+        }
+
+        .day{
+            width: 400PX;
+            margin-left: 450PX;
+            text-align: center;
+            font-size: 32px;
+            color:rgb(102, 46, 46);
+            background-color: rgb(168, 201, 202);
+            border:5px solid rgb(139, 124, 124);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+        }
+
+        .date {
+            width: 400PX;
+            margin-left: 450PX;
+            text-align: center;
+            font-size: 50px;
+            color: rgb(224, 174, 155);
+            background-color: rgb(52, 82, 74);
+            border: 5px solid rgb(29, 195, 224);
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+        }
+    </style>
+  </head>
+  <body>
+    <h4>Digital Clock</h4>
+    <div id="clock"></div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fontawesome-iconpicker/3.2.0/js/fontawesome-iconpicker.min.js" integrity="sha512-7dlzSK4Ulfm85ypS8/ya0xLf3NpXiML3s6HTLu4qDq7WiJWtLLyrXb9putdP3/1umwTmzIvhuu9EW7gHYSVtCQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+    function updateClock(){
+      let clock = document.getElementById('clock');
+
+      let day = new Date().getDate();
+      
+      let hours = new Date().getHours();
+      let minutes = new Date().getMinutes();
+      let seconds = new Date().getSeconds();
+
+      let times = `${hours}:${minutes}:${seconds} ${hours < 12 ? 'AM' : 'PM'}`;
+
+    //   console.log(times);
+
+    var dayInDigit = new Date().getDay();
+    var monthInDigit = new Date().getMonth();
+
+    let days = new Date().getDay();
+    let month = new Date().getMonth();
+    let year = new Date().getFullYear();
+
+
+    let dayInWord;
+      switch (dayInDigit) {
+        case 0:
+          dayInWord = 'Sunday';
+          break;
+        case 1:
+          dayInWord = 'Monday';
+          break;
+        case 2:
+          dayInWord = 'Tuesday';
+          break;
+        case 3:
+          dayInWord = 'Wednesday';
+          break;
+        case 4:
+          dayInWord = 'Thursday';
+          break;
+        case 5:
+          dayInWord = 'Friday';
+          break;
+        case 6:
+          dayInWord = 'Saturday';
+          break;
+      }
+
+      // console.log(dayInWord);
+
+      let dayInMonth;
+      switch (monthInDigit) {
+        case 0:
+          dayInMonth = 'January';
+          break;
+        case 1:
+          dayInMonth = 'February';
+          break;
+        case 2:
+          dayInMonth = 'March';
+          break;
+        case 3:
+          dayInMonth = 'April';
+          break;
+        case 4:
+          dayInMonth = 'May';
+          break;
+        case 5:
+          dayInMonth = 'June';
+          break;
+        case 6:
+          dayInMonth = 'July';
+          break;
+        case 7:
+          dayInMonth = 'August';
+          break;
+        case 8:
+          dayInMonth = 'September';
+          break;
+        case 9:
+          dayInMonth = 'Octomber';
+          break;
+        case 10:
+          dayInMonth = 'November';
+          break;
+        case 11:
+          dayInMonth = 'December';
+          break;
+      }
+
+      // console.log(dayInMonth);
+
+    let date = `${dayInWord}, ${day} ${dayInMonth} ${year}`;
+
+    // console.log(date);
+    // console.log(times);
+
+
+ clock.innerHTML = `<div class="day">${date}</div>,<div class="date">${times}</div>`;
+    }
+
+    setInterval(updateClock, 1000);
+
+    updateClock();
+
+    </script>
+    
+</body>
+</html>
